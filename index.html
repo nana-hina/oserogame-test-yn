@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Othello</title>
+    <style>
+        /* CSSは簡略化しています。別途、見た目を整える必要があります。 */
+        .board {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            border: 4px solid #333;
+            margin: 20px auto;
+            background-color: #046304; /* オセロ盤の色 */
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .disc {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .black { background-color: black; }
+        .white { background-color: white; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Othello</h1>
+    <div id="othello-board" class="board">
+        </div>
+    <p>現在のプレイヤー: <span id="current-player">黒</span></p>
+    <p>黒: <span id="score-black">2</span> / 白: <span id="score-white">2</span></p>
+    <script src="othello.js"></script>
+</body>
+</html>
